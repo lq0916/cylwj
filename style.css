@@ -43,7 +43,7 @@ ul li a::before
     color:var(--clr);
     width:0;
     overflow:hidden;
-    border-right:12px solid var(--clr);
+    border-right:6px solid var(--clr);
     transition:1s
 }
 
