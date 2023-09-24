@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>链接</title>
+    <link rel="stylesheeet" href="style.css">
 </head>
 <body>
-<h1>链接</h1>
-<h2>烟花链接</h2>
-<a href="firework.html">烟花</a>
-<h2>玩笑链接</h2>
-<a href="wan.html">玩笑</a>
-<h2>爱心链接</h2>
-<a href="heart.html">爱心</a>
+    <ul>
+        <li style="--clr:#00ade1;">
+            <a href="firework.html" data-text="&nbsp;烟花">&nbsp;烟花</a>
+        </li>
+        <li style="--clr:#ff6493;">
+            <a href="wan.html" data-text="&nbsp;玩笑">&nbsp;玩笑</a>
+        </li>
+        <li style="--clr:#00dc82;">
+            <a href="heart.html" data-text="&nbsp;爱心">&nbsp;爱心</a>
+        </li>
+    </ul>
+    <script>
+        let text = document.querySelectorAll('ul li a').forEach(text
+            => {
+            text.innerHTML = text.innerText.split('').map((letters, i) => '<span>${letters}</span>').join('');
+            let spn = document.querySelectorAll('ul li a span').forEach(e => {
+                let duration = Math.random() * 5;
+                e.style.animationDuration = 0.25 + duration + 's';
+                e.style.animationDelay = 0.25 + duration + 's';
+            })
+            })
+    </script>
 </body>
 </html>
